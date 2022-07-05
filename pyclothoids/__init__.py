@@ -1,1 +1,1 @@
-from .clothoid import Clothoid, SolveG2
+from .clothoid import Clothoid, SolveG2, SolveG2FixedLength
