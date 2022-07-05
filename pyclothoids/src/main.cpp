@@ -65,6 +65,7 @@ PYBIND11_MODULE(_clothoids_cpp, m) {
     py::class_<G2lib::G2solve3arc>(m, "G2solve3arc")
         .def(py::init<>())
         .def("build",&G2lib::G2solve3arc::build, py::arg("x0"), py::arg("y0"), py::arg("t0"), py::arg("k0"), py::arg("x1"), py::arg("y1"), py::arg("t1"), py::arg("k1"), py::arg("Dmax") = 0, py::arg("dmax") = 0)
+        .def("build_fixed_length",&G2lib::G2solve3arc::build_fixed_length, py::arg("s0"), py::arg("x0"), py::arg("y0"), py::arg("t0"), py::arg("k0"), py::arg("s1"), py::arg("x1"), py::arg("y1"), py::arg("t1"), py::arg("k1"))
         .def("totalLength",&G2lib::G2solve3arc::totalLength)
         .def("getS0", &G2lib::G2solve3arc::getS0)
         .def("getS1", &G2lib::G2solve3arc::getS1)
