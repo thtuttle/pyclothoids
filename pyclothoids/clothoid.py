@@ -195,5 +195,5 @@ def SolveG2FixedLength(s0,x0,y0,t0,k0,s1,x1,y1,t1,k1):
     endpoints, two tangents, and two curvatures
     """
     solver = G2solve3arc()
-    solver.build_fixed_length(s0,x0,y0,t0,k0,s1,x1,y1,t1,k1,0,0)
+    solver.build_fixed_length(s0,x0,y0,t0,k0,s1,x1,y1,t1,k1)
     return tuple(map(Clothoid,(solver.getS0(),solver.getSM(),solver.getS1())))
